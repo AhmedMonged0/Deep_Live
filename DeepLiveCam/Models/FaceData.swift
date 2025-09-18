@@ -113,7 +113,7 @@ struct AppSettings: Codable {
     
     static let shared = AppSettings()
     
-    private init() {}
+    init() {}
     
     func save() {
         if let data = try? JSONEncoder().encode(self) {
