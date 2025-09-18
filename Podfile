@@ -8,7 +8,7 @@ target 'DeepLiveCam' do
   # Pods for DeepLiveCam
   pod 'OpenCV', '~> 4.5.0'
   pod 'TensorFlowLiteSwift', '~> 2.10.0'
-  pod 'CoreMLHelpers', '~> 0.1.0'
+  # CoreML is built into iOS, no need for external pod
 end
 
 post_install do |installer|
