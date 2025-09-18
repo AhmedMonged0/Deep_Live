@@ -5,6 +5,8 @@ workflows:
       vars:
         XCODE_WORKSPACE: "DeepLiveCam.xcworkspace"
         XCODE_SCHEME: "DeepLiveCam"
+        BUNDLE_ID: "com.deeplivecam.app"
+        TEAM_ID: "F8WF6PT8DC"
       xcode: latest
       cocoapods: default
     scripts:
@@ -17,6 +19,9 @@ workflows:
             -scheme "$XCODE_SCHEME" \
             -sdk iphoneos \
             -configuration Release \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
             archive -archivePath $PWD/build/DeepLiveCam.xcarchive
 
           xcodebuild -exportArchive \

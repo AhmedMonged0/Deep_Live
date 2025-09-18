@@ -16,5 +16,9 @@
     <true/>
     <key>thinning</key>
     <string>&lt;none&gt;</string>
+    <key>signingStyle</key>
+    <string>automatic</string>
+    <key>signingCertificate</key>
+    <string>iOS Development</string>
 </dict>
 </plist>
