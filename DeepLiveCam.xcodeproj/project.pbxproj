@@ -16,9 +16,9 @@
 		A1234567890ABCDEF00E /* FaceDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF00D /* FaceDetectionService.swift */; };
 		A1234567890ABCDEF010 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF00F /* ImagePicker.swift */; };
 		A1234567890ABCDEF012 /* VideoProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF011 /* VideoProcessor.swift */; };
-		A1234567890ABCDEF017 /* FaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF014 /* FaceData.swift */; };
-		A1234567890ABCDEF018 /* FaceSwapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF015 /* FaceSwapModel.swift */; };
-		A1234567890ABCDEF019 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF016 /* SettingsView.swift */; };
+		A1234567890ABCDEF017 /* FaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF030 /* FaceData.swift */; };
+		A1234567890ABCDEF018 /* FaceSwapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF031 /* FaceSwapModel.swift */; };
+		A1234567890ABCDEF019 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF032 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +32,9 @@
 		A1234567890ABCDEF00F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A1234567890ABCDEF011 /* VideoProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoProcessor.swift; sourceTree = "<group>"; };
 		A1234567890ABCDEF013 /* DeepLiveCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepLiveCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1234567890ABCDEF014 /* FaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceData.swift; sourceTree = "<group>"; };
-		A1234567890ABCDEF015 /* FaceSwapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSwapModel.swift; sourceTree = "<group>"; };
-		A1234567890ABCDEF016 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A1234567890ABCDEF030 /* FaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceData.swift; sourceTree = "<group>"; };
+		A1234567890ABCDEF031 /* FaceSwapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSwapModel.swift; sourceTree = "<group>"; };
+		A1234567890ABCDEF032 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 			children = (
 				A1234567890ABCDEF009 /* CameraView.swift */,
 				A1234567890ABCDEF00F /* ImagePicker.swift */,
-				A1234567890ABCDEF016 /* SettingsView.swift */,
+				A1234567890ABCDEF032 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,8 +101,8 @@
 		A1234567890ABCDEF01A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A1234567890ABCDEF014 /* FaceData.swift */,
-				A1234567890ABCDEF015 /* FaceSwapModel.swift */,
+				A1234567890ABCDEF030 /* FaceData.swift */,
+				A1234567890ABCDEF031 /* FaceSwapModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
