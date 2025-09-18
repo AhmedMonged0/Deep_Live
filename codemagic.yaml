@@ -1,0 +1,27 @@
+workflows:
+  ios-workflow:
+    name: iOS Build
+    environment:
+      vars:
+        XCODE_WORKSPACE: "DeepLiveCamApp.xcworkspace" # غيّرها لو مشروعك xcproject
+        XCODE_SCHEME: "DeepLiveCamApp" # غيّرها لاسم الـ scheme بتاعك
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: Install dependencies
+        script: |
+          pod install
+      - name: Build IPA
+        script: |
+          xcodebuild clean -workspace "$XCODE_WORKSPACE" \
+            -scheme "$XCODE_SCHEME" \
+            -sdk iphoneos \
+            -configuration Release \
+            archive -archivePath $PWD/build/DeepLiveCam.xcarchive
+
+          xcodebuild -exportArchive \
+            -archivePath $PWD/build/DeepLiveCam.xcarchive \
+            -exportOptionsPlist ExportOptions.plist \
+            -exportPath $PWD/build
+    artifacts:
+      - build/*.ipa
