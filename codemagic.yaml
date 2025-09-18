@@ -3,8 +3,8 @@ workflows:
     name: iOS Build
     environment:
       vars:
-        XCODE_WORKSPACE: "DeepLiveCamApp.xcworkspace" # غيّرها لو مشروعك xcproject
-        XCODE_SCHEME: "DeepLiveCamApp" # غيّرها لاسم الـ scheme بتاعك
+        XCODE_WORKSPACE: "DeepLiveCam.xcworkspace"
+        XCODE_SCHEME: "DeepLiveCam"
       xcode: latest
       cocoapods: default
     scripts:
