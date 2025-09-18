@@ -1,6 +1,62 @@
 import SwiftUI
 import AVFoundation
 
+// MARK: - Temporary Types for Compilation
+class CameraManager: ObservableObject {
+    @Published var isSessionRunning = false
+    @Published var currentFrame: UIImage?
+    
+    func requestCameraPermission() {
+        // Placeholder implementation
+    }
+    
+    func startSession() {
+        isSessionRunning = true
+    }
+    
+    func stopSession() {
+        isSessionRunning = false
+    }
+}
+
+class FaceSwapProcessor: ObservableObject {
+    @Published var processedImage: UIImage?
+    
+    func processFrame(_ frame: UIImage, with sourceImage: UIImage?) {
+        // Placeholder implementation
+        processedImage = frame
+    }
+}
+
+class ModelManager: ObservableObject {
+    func loadModels() {
+        // Placeholder implementation
+    }
+}
+
+struct AppSettings {
+    static func load() -> AppSettings {
+        return AppSettings()
+    }
+}
+
+struct SettingsView: View {
+    var body: some View {
+        Text("Settings")
+    }
+}
+
+struct ImagePicker: UIViewControllerRepresentable {
+    @Binding var selectedImage: UIImage?
+    
+    func makeUIViewController(context: Context) -> UIViewController {
+        return UIViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
+}
+
+// MARK: - Main Content View
 struct ContentView: View {
     @StateObject private var cameraManager = CameraManager()
     @StateObject private var faceProcessor = FaceSwapProcessor()
@@ -95,11 +151,18 @@ struct ContentView: View {
                         .font(.headline)
                         .foregroundColor(.primary)
                     
-                    CameraView(
-                        cameraManager: cameraManager,
-                        faceProcessor: faceProcessor,
-                        sourceImage: selectedSourceImage
-                    )
+                    // Camera Preview Placeholder
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color.black)
+                        .overlay(
+                            VStack {
+                                Image(systemName: "camera")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Camera Preview")
+                                    .foregroundColor(.white)
+                            }
+                        )
                     .frame(height: 300)
                     .cornerRadius(12)
                     .overlay(
