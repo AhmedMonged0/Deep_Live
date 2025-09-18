@@ -6,9 +6,9 @@ target 'DeepLiveCam' do
   use_frameworks!
 
   # Pods for DeepLiveCam
-  pod 'Dynamic-OpenCV', '~> 4.3.0'
   pod 'TensorFlowLiteSwift', '~> 2.10.0'
-  # CoreML is built into iOS, no need for external pod
+  # CoreML and Vision frameworks are built into iOS
+  # OpenCV can be added later if needed
 end
 
 post_install do |installer|
