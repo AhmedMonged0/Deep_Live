@@ -16,9 +16,9 @@
 		A1234567890ABCDEF00E /* FaceDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF00D /* FaceDetectionService.swift */; };
 		A1234567890ABCDEF010 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF00F /* ImagePicker.swift */; };
 		A1234567890ABCDEF012 /* VideoProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF011 /* VideoProcessor.swift */; };
-		A1234567890ABCDEF017 /* FaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF030 /* FaceData.swift */; };
-		A1234567890ABCDEF018 /* FaceSwapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF031 /* FaceSwapModel.swift */; };
-		A1234567890ABCDEF019 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF032 /* SettingsView.swift */; };
+		A1234567890ABCDEF040 /* FaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF030 /* FaceData.swift */; };
+		A1234567890ABCDEF041 /* FaceSwapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF031 /* FaceSwapModel.swift */; };
+		A1234567890ABCDEF042 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF032 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,9 +192,9 @@
 				A1234567890ABCDEF010 /* ImagePicker.swift in Sources */,
 				A1234567890ABCDEF012 /* VideoProcessor.swift in Sources */,
 				A1234567890ABCDEF001 /* DeepLiveCamApp.swift in Sources */,
-				A1234567890ABCDEF017 /* FaceData.swift in Sources */,
-				A1234567890ABCDEF018 /* FaceSwapModel.swift in Sources */,
-				A1234567890ABCDEF019 /* SettingsView.swift in Sources */,
+				A1234567890ABCDEF040 /* FaceData.swift in Sources */,
+				A1234567890ABCDEF041 /* FaceSwapModel.swift in Sources */,
+				A1234567890ABCDEF042 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
