@@ -19,6 +19,7 @@
 		A1234567890ABCDEF040 /* FaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF030 /* FaceData.swift */; };
 		A1234567890ABCDEF041 /* FaceSwapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF031 /* FaceSwapModel.swift */; };
 		A1234567890ABCDEF042 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF032 /* SettingsView.swift */; };
+		A1234567890ABCDEF051 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF050 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A1234567890ABCDEF030 /* FaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceData.swift; sourceTree = "<group>"; };
 		A1234567890ABCDEF031 /* FaceSwapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSwapModel.swift; sourceTree = "<group>"; };
 		A1234567890ABCDEF032 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A1234567890ABCDEF050 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				A1234567890ABCDEF018 /* Views */,
 				A1234567890ABCDEF019 /* Services */,
 				A1234567890ABCDEF01A /* Models */,
+				A1234567890ABCDEF01C /* Utils */,
 				A1234567890ABCDEF004 /* Assets.xcassets */,
 				A1234567890ABCDEF01B /* Preview Content */,
 			);
@@ -105,6 +108,14 @@
 				A1234567890ABCDEF031 /* FaceSwapModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A1234567890ABCDEF01C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A1234567890ABCDEF050 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		A1234567890ABCDEF01B /* Preview Content */ = {
@@ -195,6 +206,7 @@
 				A1234567890ABCDEF040 /* FaceData.swift in Sources */,
 				A1234567890ABCDEF041 /* FaceSwapModel.swift in Sources */,
 				A1234567890ABCDEF042 /* SettingsView.swift in Sources */,
+				A1234567890ABCDEF051 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

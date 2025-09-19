@@ -1,5 +1,6 @@
 import Foundation
 import os.log
+import UIKit
 
 class Logger {
     static let shared = Logger()

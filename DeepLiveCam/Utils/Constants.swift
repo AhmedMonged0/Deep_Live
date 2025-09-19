@@ -149,13 +149,5 @@ struct DebugConstants {
     static let enableFaceDetectionDebug = true
     static let enableProcessingDebug = true
     static let logLevel: LogLevel = .debug
-    
-    enum LogLevel: Int {
-        case error = 0
-        case warning = 1
-        case info = 2
-        case debug = 3
-        case verbose = 4
-    }
 }
 #endif
