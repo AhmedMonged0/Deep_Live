@@ -101,6 +101,36 @@ struct VideoProcessingSettings {
     }
 }
 
+// MARK: - Face Processing Error
+enum FaceProcessingError: Error, LocalizedError {
+    case noFacesDetected
+    case faceDetectionFailed
+    case landmarkExtractionFailed
+    case modelLoadingFailed
+    case processingFailed
+    case invalidImage
+    case unsupportedFormat
+    
+    var errorDescription: String? {
+        switch self {
+        case .noFacesDetected:
+            return "No faces detected in the image"
+        case .faceDetectionFailed:
+            return "Face detection failed"
+        case .landmarkExtractionFailed:
+            return "Failed to extract face landmarks"
+        case .modelLoadingFailed:
+            return "Failed to load AI model"
+        case .processingFailed:
+            return "Face processing failed"
+        case .invalidImage:
+            return "Invalid image provided"
+        case .unsupportedFormat:
+            return "Unsupported image format"
+        }
+    }
+}
+
 // MARK: - App Settings
 struct AppSettings: Codable {
     var autoSave: Bool = true

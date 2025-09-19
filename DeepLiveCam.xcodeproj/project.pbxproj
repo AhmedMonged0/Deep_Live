@@ -21,6 +21,10 @@
 		A1234567890ABCDEF042 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF032 /* SettingsView.swift */; };
 		A1234567890ABCDEF051 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF050 /* Constants.swift */; };
 		A1234567890ABCDEF062 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF061 /* Logger.swift */; };
+		A1234567890ABCDEF070 /* AdvancedFaceProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF069 /* AdvancedFaceProcessor.swift */; };
+		A1234567890ABCDEF071 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF068 /* SettingsManager.swift */; };
+		A1234567890ABCDEF072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF067 /* AppDelegate.swift */; };
+		A1234567890ABCDEF073 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF066 /* PermissionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		A1234567890ABCDEF032 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A1234567890ABCDEF050 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A1234567890ABCDEF061 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		A1234567890ABCDEF069 /* AdvancedFaceProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedFaceProcessor.swift; sourceTree = "<group>"; };
+		A1234567890ABCDEF068 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		A1234567890ABCDEF067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1234567890ABCDEF066 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 				A1234567890ABCDEF00B /* FaceSwapProcessor.swift */,
 				A1234567890ABCDEF00D /* FaceDetectionService.swift */,
 				A1234567890ABCDEF011 /* VideoProcessor.swift */,
+				A1234567890ABCDEF069 /* AdvancedFaceProcessor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -117,6 +126,9 @@
 			children = (
 				A1234567890ABCDEF050 /* Constants.swift */,
 				A1234567890ABCDEF061 /* Logger.swift */,
+				A1234567890ABCDEF068 /* SettingsManager.swift */,
+				A1234567890ABCDEF067 /* AppDelegate.swift */,
+				A1234567890ABCDEF066 /* PermissionManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -211,6 +223,10 @@
 				A1234567890ABCDEF042 /* SettingsView.swift in Sources */,
 				A1234567890ABCDEF051 /* Constants.swift in Sources */,
 				A1234567890ABCDEF062 /* Logger.swift in Sources */,
+				A1234567890ABCDEF070 /* AdvancedFaceProcessor.swift in Sources */,
+				A1234567890ABCDEF071 /* SettingsManager.swift in Sources */,
+				A1234567890ABCDEF072 /* AppDelegate.swift in Sources */,
+				A1234567890ABCDEF073 /* PermissionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
