@@ -20,6 +20,7 @@
 		A1234567890ABCDEF041 /* FaceSwapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF031 /* FaceSwapModel.swift */; };
 		A1234567890ABCDEF042 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF032 /* SettingsView.swift */; };
 		A1234567890ABCDEF051 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF050 /* Constants.swift */; };
+		A1234567890ABCDEF062 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890ABCDEF061 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A1234567890ABCDEF031 /* FaceSwapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSwapModel.swift; sourceTree = "<group>"; };
 		A1234567890ABCDEF032 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A1234567890ABCDEF050 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A1234567890ABCDEF061 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				A1234567890ABCDEF050 /* Constants.swift */,
+				A1234567890ABCDEF061 /* Logger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				A1234567890ABCDEF041 /* FaceSwapModel.swift in Sources */,
 				A1234567890ABCDEF042 /* SettingsView.swift in Sources */,
 				A1234567890ABCDEF051 /* Constants.swift in Sources */,
+				A1234567890ABCDEF062 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
