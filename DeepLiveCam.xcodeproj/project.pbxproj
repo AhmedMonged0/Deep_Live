@@ -66,7 +66,7 @@
 				A1234567890ABCDEF018 /* Views */,
 				A1234567890ABCDEF019 /* Services */,
 				A1234567890ABCDEF01A /* Models */,
-				A1234567890ABCDEF01C /* Utils */,
+				A1234567890ABCDEF060 /* Utils */,
 				A1234567890ABCDEF004 /* Assets.xcassets */,
 				A1234567890ABCDEF01B /* Preview Content */,
 			);
@@ -110,7 +110,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A1234567890ABCDEF01C /* Utils */ = {
+		A1234567890ABCDEF060 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				A1234567890ABCDEF050 /* Constants.swift */,
