@@ -3,7 +3,6 @@ import Vision
 import CoreML
 import CoreImage
 import UIKit
-import Accelerate
 
 class AdvancedFaceProcessor: ObservableObject {
     @Published var isProcessing = false
@@ -251,28 +250,7 @@ class AdvancedFaceProcessor: ObservableObject {
 }
 
 // MARK: - Error Types
-enum FaceProcessingError: Error, LocalizedError {
-    case noFacesDetected
-    case landmarksExtractionFailed
-    case faceAlignmentFailed
-    case maskCreationFailed
-    case faceSwapFailed
-    
-    var errorDescription: String? {
-        switch self {
-        case .noFacesDetected:
-            return "No faces detected in the image"
-        case .landmarksExtractionFailed:
-            return "Failed to extract face landmarks"
-        case .faceAlignmentFailed:
-            return "Failed to align faces"
-        case .maskCreationFailed:
-            return "Failed to create face mask"
-        case .faceSwapFailed:
-            return "Failed to perform face swap"
-        }
-    }
-}
+// FaceProcessingError is defined in FaceData.swift
 
 // MARK: - UIImage Extensions
 extension UIImage {
