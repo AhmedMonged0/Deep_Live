@@ -15,20 +15,42 @@ workflows:
       - name: Build for iOS Simulator
         script: |
           # Build for iOS Simulator (no code signing required)
+          echo "Starting build for iOS Simulator..."
+          
+          # First, let's try a simple build without destination to see if it compiles
+          echo "Attempting build without specific destination..."
           xcodebuild clean -workspace "$XCODE_WORKSPACE" \
             -scheme "$XCODE_SCHEME" \
             -sdk iphonesimulator \
             -configuration Debug \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO \
             build -derivedDataPath $PWD/build/DerivedData
           
+          BUILD_RESULT=$?
+          echo "Build result: $BUILD_RESULT"
+          
+          if [ $BUILD_RESULT -ne 0 ]; then
+            echo "Build failed! Showing detailed error output..."
+            # Show the last 50 lines of build output for debugging
+            echo "=== BUILD ERROR DETAILS ==="
+            xcodebuild -workspace "$XCODE_WORKSPACE" \
+              -scheme "$XCODE_SCHEME" \
+              -sdk iphonesimulator \
+              -configuration Debug \
+              CODE_SIGN_IDENTITY="" \
+              CODE_SIGNING_REQUIRED=NO \
+              CODE_SIGNING_ALLOWED=NO \
+              build -derivedDataPath $PWD/build/DerivedData 2>&1 | tail -50
+            exit 1
+          fi
+          
           # Find and copy the .app bundle to build directory
           mkdir -p $PWD/build
           
           # Look for the .app file in the derived data directory
+          echo "Searching for DeepLiveCam.app..."
           APP_PATH=$(find $PWD/build/DerivedData -name "DeepLiveCam.app" -type d | head -1)
           
           if [ -n "$APP_PATH" ]; then
@@ -39,10 +61,15 @@ workflows:
             cd $PWD/build
             zip -r DeepLiveCam-Simulator.zip DeepLiveCam.app
             echo "Build completed successfully!"
+            ls -la $PWD/build/
           else
             echo "Error: DeepLiveCam.app not found in build output"
             echo "Contents of DerivedData:"
-            find $PWD/build/DerivedData -name "*.app" -type d
+            find $PWD/build/DerivedData -type d -name "*DeepLiveCam*" 2>/dev/null || echo "No DeepLiveCam directories found"
+            echo "All .app files found:"
+            find $PWD/build/DerivedData -name "*.app" -type d 2>/dev/null || echo "No .app files found"
+            echo "Build directory structure:"
+            ls -la $PWD/build/DerivedData/ 2>/dev/null || echo "DerivedData directory not found"
             exit 1
           fi
     artifacts:
