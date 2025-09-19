@@ -25,13 +25,26 @@ workflows:
             CODE_SIGNING_ALLOWED=NO \
             build -derivedDataPath $PWD/build/DerivedData
           
-          # Copy the .app bundle to build directory
+          # Find and copy the .app bundle to build directory
           mkdir -p $PWD/build
-          cp -r $PWD/build/DerivedData/Build/Products/Debug-iphonesimulator/DeepLiveCam.app $PWD/build/
           
-          # Create a zip file for easier download
-          cd $PWD/build
-          zip -r DeepLiveCam-Simulator.zip DeepLiveCam.app
+          # Look for the .app file in the derived data directory
+          APP_PATH=$(find $PWD/build/DerivedData -name "DeepLiveCam.app" -type d | head -1)
+          
+          if [ -n "$APP_PATH" ]; then
+            echo "Found app at: $APP_PATH"
+            cp -r "$APP_PATH" $PWD/build/
+            
+            # Create a zip file for easier download
+            cd $PWD/build
+            zip -r DeepLiveCam-Simulator.zip DeepLiveCam.app
+            echo "Build completed successfully!"
+          else
+            echo "Error: DeepLiveCam.app not found in build output"
+            echo "Contents of DerivedData:"
+            find $PWD/build/DerivedData -name "*.app" -type d
+            exit 1
+          fi
     artifacts:
       - build/DeepLiveCam.app
       - build/DeepLiveCam-Simulator.zip
