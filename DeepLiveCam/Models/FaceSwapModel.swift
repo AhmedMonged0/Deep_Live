@@ -2,6 +2,7 @@ import Foundation
 import CoreML
 import Vision
 import CoreImage
+import UIKit
 
 // MARK: - Face Swap Model
 class FaceSwapModel {

@@ -1,6 +1,7 @@
 import Foundation
 import Vision
 import CoreImage
+import UIKit
 
 // MARK: - Face Data Models
 struct FaceData {
